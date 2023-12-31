@@ -3,16 +3,16 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        private string Modelo;
-        private string IMEI;
-        private int Memoria;
+        private string _modelo;
+        private string _imei;
+        private int _memoria;
 
         public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
-            Modelo = modelo;
-            IMEI = imei;
-            Memoria = memoria;
+            _modelo = modelo;
+            _imei = imei;
+            _memoria = memoria;
 
         }
 
@@ -31,9 +31,9 @@ namespace DesafioPOO.Models
         public void Especificacoes(){
             Console.WriteLine("\nEspecificações:");
             Console.WriteLine($"- Número atual: {Numero}");
-            Console.WriteLine($"- Modelo: {Modelo}");
-            Console.WriteLine($"- IMEI: {IMEI}");
-            Console.WriteLine($"- Amarzenamento: {Memoria} GB");
+            Console.WriteLine($"- Modelo: {_modelo}");
+            Console.WriteLine($"- IMEI: {_imei}");
+            Console.WriteLine($"- Amarzenamento: {_memoria} GB");
         }
 
         public void MudarNumero(string numeroNovo)
